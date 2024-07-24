@@ -1,0 +1,154 @@
+// 遍历主题颜色
+@mixin themeify {
+  @each $theme-name, $theme-map in $themes {
+    // !global 把局部变量强升为全局变量
+    $theme-map: $theme-map !global;
+    // 判断html的data-theme属性值 #{}是sass的插值表达式 &是sass嵌套父容器标识 @content是混合器插槽
+    [data-theme='#{$theme-name}'] & {
+      @content;
+    }
+  }
+}
+// 根据key获取颜色值
+// @function themed($key) {
+//   @return map-get($theme-map, $key);
+// }
+// 获取背景颜色
+@mixin bg-color($color) {
+  @include themeify {
+    background-color: themed($color) !important;
+  }
+}
+// 获取字体颜色
+@mixin font-color($color) {
+  @include themeify {
+    color: themed($color) !important;
+  }
+}
+// 获取边框颜色
+@mixin border-color($color) {
+  @include themeify {
+    border-color: themed($color) !important;
+  }
+}
+
+@mixin clearfix {
+  zoom: 1;
+
+  &:after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+@mixin input-placeholder($fontSize, $color) {
+  &::-webkit-input-placeholder {
+    font-size: $fontSize;
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    font-size: $fontSize;
+    color: $color;
+  }
+  &::-moz-placeholder {
+    font-size: $fontSize;
+    color: $color;
+  }
+  &:-moz-placeholder {
+    font-size: $fontSize;
+    color: $color;
+  }
+}
+
+@mixin scrollbar($orient: 'vertical', $barWidth: 10px, $thumbColor: #aaa, $trackColor: #eee) {
+  @if $orient == 'vertical' {
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: $barWidth;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: $barWidth;
+      background-color: $thumbColor;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: $barWidth;
+      background-color: $trackColor;
+    }
+  } @else {
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      height: $barWidth;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: $barWidth;
+      background-color: $thumbColor;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: $barWidth;
+      background-color: $trackColor;
+    }
+  }
+}
+
+@mixin text-ellipsis($line: 1) {
+  @if $line == 1 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  } @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+  }
+}
+
+// 水波动画
+@mixin a-ripple($bgColor: #fff, $duration: 10s) {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+
+  &:before,
+  &:after {
+    content: '';
+    // z-index: $zIndex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    margin-left: -100%;
+    background-color: $bgColor;
+  }
+
+  &:before {
+    opacity: 0.4;
+    border-radius: 45%;
+    animation: ripple $duration linear infinite;
+  }
+
+  &:after {
+    opacity: 0.2;
+    border-radius: 55%;
+    animation: ripple $duration linear $duration/2 infinite;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: translateY(0) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(-5%) rotateZ(180deg);
+  }
+  100% {
+    transform: translateY(0%) rotateZ(360deg);
+  }
+}

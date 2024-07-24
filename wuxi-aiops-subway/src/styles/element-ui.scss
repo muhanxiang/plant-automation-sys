@@ -1,0 +1,27 @@
+$--color-primary: $color-primary; // 主要
+$--color-success: $color-success; // 成功
+$--color-warning: $color-warning; // 告警
+$--color-danger: $color-danger; // 危险
+$--color-info: $color-info; // 信息
+
+// $--color-text-primary: $text-primary; // 主要
+// $--color-text-regular: $text-regular; // 常规
+// $--color-text-secondary: $text-secondary; // 次要
+// $--color-text-placeholder: $text-placeholder; // 占位
+
+$--border-color-base: $border-base;
+$--border-color-light: $border-light;
+$--border-color-lighter: $border-lighter;
+$--border-color-extra-light: $border-extra-light;
+
+$--background-color-base: $bg-base;
+
+/* Descriptions */
+$--descriptions-header-margin-bottom: 1vh;
+$--descriptions-title-font-size: 16px;
+$--descriptions-table-border: $border-default;
+$--descriptions-item-bordered-label-background: $bg-label;
+
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import '~element-ui/packages/theme-chalk/src/index';

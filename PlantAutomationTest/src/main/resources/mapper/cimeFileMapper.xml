@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.cimeFileMapper">
+
+    <insert id="insertBatch">
+        insert into typeerror (tableId, tableName, type, `signal`, `index`, data, result, reason, templateIndex, template) values
+        <foreach collection="list" item="i"  separator=",">
+            (#{i.tableId},#{i.tableName},#{i.type},#{i.signal},#{i.index},#{i.data},#{i.result},#{i.reason},#{i.templateIndex},#{i.template})
+        </foreach>
+    </insert>
+</mapper>

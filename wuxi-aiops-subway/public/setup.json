@@ -1,0 +1,85 @@
+{
+  "index": "/dashboard",
+  "mode": "station",
+  "title": "厂站自动化管控系统",
+  "footer": "xxxxx科技有限公司 | Astraeus",
+  "company": "主站",
+  "station": "cdb0b9d2175411ec8e3e0242ac14001e",
+  "system": {
+    "name": "厂站自动化管控系统",
+    "date": "2022-01-07",
+    "weather": "null",
+    "humidity": "1_3_1_1",
+    "rainfall": "null",
+    "temperature": "1_3_1_0",
+    "winddirection": "null",
+    "windspeed": "null"
+  },
+  "menu_list": [
+    {
+      "name": "Dashboard",
+      "title": "首页总览"
+    },
+    {
+      "name": "Patrol",
+      "title": "在线巡视",
+      "children": [
+        { "name": "TaskManage", "title": "任务方案" },
+        { "name": "TaskMonitor", "title": "任务监控" },
+        { "name": "TaskCalendar", "title": "任务日历" },
+        { "name": "TaskIdentify", "title": "单点识别" }
+      ]
+    },
+    {
+      "name": "Monitor",
+      "title": "实时监控",
+      "children": [
+        { "name": "VideoMonitor", "title": "视频监控" },
+        { "name": "VideoPlayback", "title": "录像回放" },
+        { "name": "GraphMonitor", "title": "状态监测" }
+      ]
+    },
+    {
+      "name": "Linkage",
+      "title": "智能联动",
+      "children": [
+        { "name": "LinkageManage", "title": "联动管理" },
+        { "name": "LinkageRecord", "title": "联动记录" }
+      ]
+    },
+    {
+      "name": "Diagnosis",
+      "title": "诊断中心",
+      "children": [
+        { "name": "DiagnosisOverview", "title": "诊断总览" },
+        { "name": "DeviceDiagnosis", "title": "设备诊断" },
+        { "name": "DiagnosisDetail", "title": "设备详情" }
+      ]
+    },
+    {
+      "name": "Events",
+      "title": "事件回溯",
+      "children": [
+        {
+          "name": "PatrolRecord",
+          "title": "巡视记录",
+          "children": [
+            { "name": "PatrolTask", "title": "巡视任务" },
+            { "name": "PatrolPoint", "title": "巡视点位" },
+            { "name": "PatrolDetails", "title": "巡视详情" }
+          ]
+        },
+        {
+          "name": "AlarmRecord",
+          "title": "告警记录",
+          "children": [
+            { "name": "PatrolAlarm", "title": "巡视告警" },
+            { "name": "MeasureAlarm", "title": "测量告警" },
+            { "name": "DefectRecord", "title": "设备缺陷" },
+            { "name": "AuditRecord", "title": "审核记录" }
+          ]
+        }
+      ]
+    }
+  ]
+}

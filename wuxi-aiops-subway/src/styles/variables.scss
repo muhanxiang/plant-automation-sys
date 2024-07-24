@@ -1,0 +1,98 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-primary: #00d0ff;
+  --color-success: #29f6aa;
+  --color-warning: #f0ae2d;
+  --color-danger: #f72222;
+  --color-info: #003053;
+  --text-primary: #00baff;
+  --text-regular: #ffffff;
+  --text-secondary: #008cff;
+  --text-placeholder: #035fa9;
+  --border-base: #035fa9;
+  --border-light: #008cff;
+  --border-lighter: #00baff;
+  --border-extra-light: #00d0ff;
+  --bg-base: #02182c;
+}
+
+/* 主题 */
+$color-white: #ffffff;
+$color-black: #000000;
+$color-btn: #002e51;
+$color-primary: #00d0ff; // 常规
+$color-success: #29f6aa; // 成功
+$color-warning: #f0ae2d; // 警告
+$color-serious: #ff8a45; // 严重
+$color-danger: #f72222; // 危险
+$color-info: #b7cffc; // 信息
+$color-main: #8a64f7; // 主要
+$color-disable: #cecece; // 禁用
+$color-primary-light: rgba($color-primary, 0.5);
+$color-success-light: rgba($color-success, 0.5);
+$color-warning-light: rgba($color-warning, 0.5);
+$color-serious-light: rgba($color-serious, 0.5);
+$color-danger-light: rgba($color-danger, 0.5);
+$color-info-light: rgba($color-info, 0.5);
+$color-main-light: rgba($color-main, 0.5);
+$color-disable-light: rgba($color-disable, 0.5);
+$color-primary-gradient: linear-gradient(0deg, transparent, $color-primary-light 100%);
+$color-success-gradient: linear-gradient(0deg, transparent, $color-success-light 100%);
+$color-warning-gradient: linear-gradient(0deg, transparent, $color-warning-light 100%);
+$color-danger-gradient: linear-gradient(0deg, transparent, $color-danger-light 100%);
+$color-info-gradient: linear-gradient(0deg, transparent, $color-info-light 100%);
+$color-primary-gradient-90: linear-gradient(-90deg, transparent, $color-primary-light 100%);
+$color-success-gradient-90: linear-gradient(-90deg, transparent, $color-success-light 100%);
+$color-warning-gradient-90: linear-gradient(-90deg, transparent, $color-warning-light 100%);
+$color-danger-gradient-90: linear-gradient(-90deg, transparent, $color-danger-light 100%);
+$color-info-gradient-90: linear-gradient(-90deg, transparent, $color-info-light 100%);
+/* 文本 */
+$text-shadow: #00baff; // 阴影
+$text-primary: #00baff; // 主要
+$text-regular: #feffff; // 常规
+$text-secondary: #008cff; // 次要
+$text-placeholder: #035fa9; // 占位
+$text-disable: #424f5e; // 禁用
+/* 边框 */
+$border-base: #035fa9;
+$border-dark: rgba($border-base, 0.5);
+$border-light: #008cff;
+$border-lighter: #00baff;
+$border-extra-light: #00d0ff;
+$border-table: $color-primary-light;
+$border-default: 1px solid $border-dark; // 默认边框
+$border-primary: mix($color-black, $color-primary, 50%);
+$border-success: mix($color-black, $color-success, 50%);
+$border-warning: mix($color-black, $color-warning, 50%);
+$border-serious: mix($color-black, $color-serious, 50%);
+$border-danger: mix($color-black, $color-danger, 50%);
+$border-info: mix($color-black, $color-info, 50%);
+$border-main: mix($color-black, $color-main, 50%);
+$border-disable: mix($color-black, $color-disable, 50%);
+/* 背景 */
+
+$bg-view: linear-gradient(0deg, #00152f7f 0%, #0030537f 100%);
+$bg-base: #feffff;
+$bg-base5: rgba($bg-base, 0.5);
+$bg-label: rgba(#00223f, 0.5);
+$bg-video: rgba($color-black, 0.5);
+$bg-table: #042139;
+$bg-table1: rgba($bg-table, 0.1);
+$bg-table2: rgba($bg-table, 0.2);
+$bg-table3: rgba($bg-table, 0.3);
+$bg-hover: #035fa9;
+$bg-hover1: rgba($bg-hover, 0.1);
+$bg-hover2: rgba($bg-hover, 0.2);
+$bg-hover3: rgba($bg-hover, 0.3);
+$bg-hover4: rgba($bg-hover, 0.4);
+$bg-hover5: rgba($bg-hover, 0.5);
+$bg-header: linear-gradient(0deg, rgba(0, 140, 255, 0.2) 0%, rgba(0, 140, 255, 0) 100%);
+$bg-popper: linear-gradient(84deg, #00223e 0%, #01142c 100%);
+$bg-popper-active: #084475; // 弹出层背景
+$bg-popper-select: #033562; // 弹出层选中
+$bg-disable: mix($color-disable, $color-primary, 50%);
+
+:export {
+  theme: $color-primary;
+}
